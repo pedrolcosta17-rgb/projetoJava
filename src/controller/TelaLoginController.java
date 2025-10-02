@@ -42,17 +42,18 @@ public class TelaLoginController {
     		ResultSet rs = stmt.executeQuery();
     		
     		if(rs.next()) {
-    			Alerts.showAlert(null, "Login bem - sucedido!", null, AlertType.INFORMATION);
+    			//Alerts.showAlert(null, "Login bem - sucedido!", null, AlertType.INFORMATION);
     			btEntrar.getScene().getWindow().hide();
     			Parent root = FXMLLoader.load(getClass().getResource("Formulario_principal.fxml"));
     			Stage stage = new Stage();
                 Scene scene = new Scene(root);
                 
                 stage.setScene(scene);
-                stage.setTitle("Sistema - by Pedro Lucas | Página inicial ");
+                stage.setTitle("Sistema - by Loja  | Página inicial ");
                 stage.centerOnScreen();
                 stage.setMaximized(true);
                 stage.show();
+                Alerts.showAlert(null, "Login bem - sucedido!", null, AlertType.INFORMATION);
     		}
     		else {
     			Alerts.showAlert(null, "Usuário ou senha incorretos!", null, AlertType.ERROR);

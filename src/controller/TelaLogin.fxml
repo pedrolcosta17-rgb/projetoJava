@@ -13,7 +13,7 @@
       <TextField fx:id="txtUsuario" layoutX="49.0" layoutY="146.0" prefHeight="26.0" prefWidth="169.0" promptText="Nome de Usuário" />
       <Text layoutX="49.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="169.33673095703125" />
       <TextField fx:id="txtSenha" layoutX="49.0" layoutY="209.0" prefHeight="26.0" prefWidth="169.0" promptText="Senha de Usuário" />
-      <Button fx:id="btEntrar" layoutX="117.0" layoutY="267.0" mnemonicParsing="false" onAction="#onbtEntrarAction" text="Entrar" />
+      <Button fx:id="btEntrar" layoutX="112.0" layoutY="267.0" mnemonicParsing="false" onAction="#onbtEntrarAction" text="Entrar" />
       <ImageView fitHeight="82.0" fitWidth="200.0" layoutX="44.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../../../Downloads/WhatsApp%20Image%202025-09-18%20at%2019.29.34%20(1).jpeg" />

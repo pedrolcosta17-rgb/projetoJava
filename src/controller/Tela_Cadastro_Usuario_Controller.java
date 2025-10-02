@@ -20,6 +20,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 	public class Tela_Cadastro_Usuario_Controller {
 
@@ -85,6 +86,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 
 		    @FXML
 		    private TextField Telefone;
+		    
+		    @FXML
+		    private TextField txtPesquisa; // Campo de texto de pesquisa (certifique-se que tem o mesmo fx:id no FXML)
+
 		    
 		    @FXML
 		    public void initialize() {
@@ -284,6 +289,68 @@ import javafx.scene.control.cell.PropertyValueFactory;
 	                    Alerts.showAlert("Erro", null, "Erro ao excluir no banco de dados.", AlertType.ERROR);
 	                }
 	            }
-	        }
+	            }
+	        
+	            
+	            @FXML
+	            private void onBtFecharAction() {
+	                // Obtém a janela (Stage) atual a partir de qualquer componente da tela
+	                Stage stage = (Stage) Nome_Cadastro.getScene().getWindow();
+	                stage.close();
+	            }
+	            
+	            @FXML
+	            private void onBtPesquisarAction() {
+	                // Pega o texto digitado no campo de pesquisa
+	                String termo = txtPesquisa.getText().trim();
+
+	                // Se o campo estiver vazio, recarrega a tabela completa
+	                if (termo.isEmpty()) {
+	                    carregarUsuarios(); 
+	                    Alerts.showAlert("Aviso", null, "Digite um nome para pesquisar ou deixe vazio para ver todos os usuários.", AlertType.INFORMATION);
+	                    return;
+	                }
+
+	                ObservableList<Usuario> listaFiltrada = FXCollections.observableArrayList();
+
+	                try (Connection conn = ConexaoMySQL.getConnection()) {
+	                    // Faz a pesquisa pelo nome (pode trocar o campo se quiser pesquisar por login, email etc.)
+	                    String sql = "SELECT * FROM usuario WHERE nome LIKE ?";
+	                    PreparedStatement stmt = conn.prepareStatement(sql);
+	                    stmt.setString(1, "%" + termo + "%");
+
+	                    ResultSet rs = stmt.executeQuery();
+	                    while (rs.next()) {
+	                        Usuario u = new Usuario(0, sql, sql, sql, sql, sql, sql, sql, sql, sql, sql, sql, sql, sql);
+	                        u.setId(rs.getInt("id"));
+	                        u.setNome(rs.getString("nome"));
+	                        u.setEmail(rs.getString("email"));
+	                        u.setCpf(rs.getString("cpf"));
+	                        u.setEndereco(rs.getString("endereco"));
+	                        u.setRg(rs.getString("rg"));
+	                        u.setBairro(rs.getString("bairro"));
+	                        u.setCelular(rs.getString("celular"));
+	                        u.setCidade(rs.getString("cidade"));
+	                        u.setTelefone(rs.getString("telefone"));
+	                        u.setLogin(rs.getString("login"));
+	                        u.setCep(rs.getString("cep"));
+	                        u.setEstado(rs.getString("estado"));
+	                        u.setSenha(rs.getString("senha"));
+	                        listaFiltrada.add(u);
+	                    }
+
+	                    // Atualiza a tabela com os resultados
+	                    Id_Tabela_Usu.setItems(listaFiltrada);
+
+	                    // Se não encontrou ninguém
+	                    if (listaFiltrada.isEmpty()) {
+	                        Alerts.showAlert("Resultado", null, "Nenhum usuário encontrado com esse nome.", AlertType.INFORMATION);
+	                    }
+
+	                } catch (Exception e) {
+	                    e.printStackTrace();
+	                    Alerts.showAlert("Erro", null, "Erro ao pesquisar no banco de dados.", AlertType.ERROR);
+	                }
+	            }
 	}
 	   
