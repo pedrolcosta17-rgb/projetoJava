@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="880.0" style="-fx-background-color: #C6E5B1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="22.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cadastro de Funcionário" wrappingWidth="196.112060546875">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Pessoais " wrappingWidth="196.112060546875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField layoutX="22.0" layoutY="90.0" prefHeight="26.0" prefWidth="405.0" />
+      <Text layoutX="22.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome Completo" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="21.0" layoutY="133.0" prefHeight="26.0" prefWidth="142.0" text="_____/________/__________" />
+      <Text layoutX="22.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="194.0" layoutY="133.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="195.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="390.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RG" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="390.0" layoutY="133.0" prefHeight="26.0" prefWidth="155.0" />
+      <TextField layoutX="196.0" layoutY="176.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="197.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Endereço" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="26.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="20.0" layoutY="176.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="390.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="E-mail" wrappingWidth="61.60001220703134">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="390.0" layoutY="176.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="22.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Profissionais  " wrappingWidth="196.112060546875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <TextField layoutX="20.0" layoutY="247.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="23.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo / Função" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="197.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departamento" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="196.0" layoutY="247.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="23.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data da Admissão" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="197.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de contrato" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="20.0" layoutY="289.0" prefHeight="26.0" prefWidth="155.0" />
+      <TextField layoutX="196.0" layoutY="289.0" prefHeight="26.0" prefWidth="155.0" />
+      <TextField layoutX="390.0" layoutY="247.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="390.0" layoutY="243.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salário" wrappingWidth="142.4000000000001">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Acesso" wrappingWidth="196.112060546875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="22.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuário (CPF ou E-mail)" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <Text layoutX="195.0" layoutY="357.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="22.0" layoutY="361.0" prefHeight="26.0" prefWidth="155.0" />
+      <TextField layoutX="196.0" layoutY="361.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="391.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nivel de Acesso" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="390.0" layoutY="361.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="22.0" layoutY="412.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Informações Adicionais " wrappingWidth="196.112060546875">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="514.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Foto 3x4 " wrappingWidth="52.91204833984375">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <TextField layoutX="22.0" layoutY="430.0" prefHeight="26.0" prefWidth="155.0" />
+      <Text layoutX="23.0" layoutY="426.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dados Bancarios" wrappingWidth="196.112060546875">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="93.0" fitWidth="71.0" layoutX="501.0" layoutY="51.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/Screenshots/images.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="435.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: #B3EBF2;" text="Cadastrar Funcionário" />
+      <Button layoutX="254.0" layoutY="456.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="170.0" style="-fx-background-color: #B3EBF2;" text="Voltar" />
+   </children>
+</AnchorPane>

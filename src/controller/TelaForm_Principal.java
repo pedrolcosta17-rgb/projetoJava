@@ -38,6 +38,13 @@ public class TelaForm_Principal {
 	   private void abrirCadastro_Usuario() {
 		   carregarTela("Tela_Cadastro_Usuario.fxml", "Formulário de Cadastro");
 		   
+	   }
+	   
+	   @FXML
+	   private void abrirTela_Funcionario() {
+		   carregarTela("Tela_Funcionario.fxml", "Formulário de Cadastro");
+		   
 		   
 	   }
+	   
 }

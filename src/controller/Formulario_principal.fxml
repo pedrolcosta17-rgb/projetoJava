@@ -12,7 +12,7 @@
          <children>
             <MenuBar prefHeight="26.0" prefWidth="600.0" style="-fx-background-color: #ADD8E6;">
               <menus>
-                <Menu mnemonicParsing="false" text="File">
+                <Menu mnemonicParsing="false" text="Produtos">
                   <items>
                     <MenuItem mnemonicParsing="false" text="Close" />
                   </items>
@@ -24,11 +24,7 @@
                               <AnchorPane prefHeight="25.0" prefWidth="25.0" />
                            </graphic>
                         </MenuItem>
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
+                    <MenuItem mnemonicParsing="false" onAction="#abrirTela_Funcionario" text="Funcionarios" />
                   </items>
                 </Menu>
               </menus>
